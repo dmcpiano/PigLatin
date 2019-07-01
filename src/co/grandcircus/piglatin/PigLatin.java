@@ -25,18 +25,25 @@ public class PigLatin {
 		String[] vowels = {"a" ,"e" ,"i" ,"o" ,"u" };
 		String[] consonants = {"b" ,"c" ,"d" ,"f" ,"g" ,"h" ,"j","k" ,"l", "m", "n", 
 								"p", "q", "r", "s", "t", "v", "w", "x", "y", "z"}; 
+		char character;
 		
 		for (int i = 0; i  < userInput.length();i++) {
 		
-			char character = userInput.charAt(i);
+			character = userInput.charAt(i);
 			
 			if (character=='a' || character=='e' || character=='i' || character == 'o' || character == 'u') {
 			String ans = userInput.substring(i) + userInput.substring( 0, i ) + "way";
 			System.out.println(ans);
-			return;
+			return;				
 				
+			} else  {
 				
+				for (i = 2; i  < userInput.length();i--) {
+				String ans1 = (userInput.substring(i) + userInput.substring( 0, 2 ) + "ay");
+				System.out.println(ans1);
+				return;
 				}
+			}
 			}
 	
 	
